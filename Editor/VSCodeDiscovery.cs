@@ -45,13 +45,16 @@ public class VSCodeDiscovery : IDiscovery
             };
 #else
             {
-              "/usr/bin/nvim",
-                // "/usr/bin/code",
-                // "/bin/code",
-                // "/usr/local/bin/code",
-                // "/var/lib/flatpak/exports/bin/com.visualstudio.code",
-                // "/snap/current/bin/code",
-                // "/snap/bin/code"
+				"/usr/local/bin/terminal",
+				"/usr/bin/x-terminal-emulator",
+				"/usr/bin/mate-terminal",
+				"/usr/bin/gnome-terminal",
+				"/usr/bin/terminator",
+				"/usr/bin/xfce4-terminal",
+				"/usr/bin/urxvt",
+				"/usr/bin/konsole",
+				"/usr/bin/kitty",
+				"/usr/bin/alacritty",
             };
 #endif
     var existingPaths = possiblePaths.Where(VSCodeExists).ToList();

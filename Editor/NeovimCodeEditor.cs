@@ -15,7 +15,7 @@ public class NeovimCodeEditor : IExternalCodeEditor
 
   // private const string PackageName = "com.cloudedmountain.ide.neovim";
   // private const string NeovimLauncher = "com.cloudedmountain.ide.neovim.sh";
-  static readonly string[] _supportedFileNames = { "nvim" };
+  static readonly string[] _supportedFileNames = { "terminal", "x-terminal-emulator", "mate-terminal", "gnome-terminal", "terminator", "xfce4-terminal", "urxvt", "konsole", "kitty", "alacritty" };
   // static string DefaultArgument { get; } = "\"$(ProjectPath)\" -g \"$(File)\":$(Line):$(Column)";
   // static string DefaultArgument { get; } = "--server /tmp/nvimsocket --remote $(filePath)";
   static string DefaultApp => EditorPrefs.GetString("kScriptsDefaultApp");
@@ -150,7 +150,7 @@ public class NeovimCodeEditor : IExternalCodeEditor
     if (column == -1)
       column = 0;
 
-    var arguments = $"--server /tmp/nvimsocket --remote {filePath}";
+    var arguments = $"nvim \"{filePath}\"";
     Debug.Log("arguments");
     Debug.Log(arguments);
 

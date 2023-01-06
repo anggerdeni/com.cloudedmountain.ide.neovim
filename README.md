@@ -40,15 +40,10 @@ Window > Package Manager > Add package from disk > select package.json
 3. Set neovim as external script edtior
 
 ```
-Edit > Preferences > External Tools > External Script Editor > select Neovim
+Edit > Preferences > External Tools > External Script Editor > select Neovim with your preferred terminal
 ```
 
-4. Start an nvim server
-
-```
-# "/tmp/nvimsocket" is the name of the server and currently hardcoded
-nvim --listen /tmp/nvimsocket
-```
+In case no terminal show up in that list, you can create an alias of your terminal in `/usr/local/bin/terminal`.
 
 ## Usage
 
